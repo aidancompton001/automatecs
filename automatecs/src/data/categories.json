@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "snackautomaten",
+    "name": "Snackautomaten",
+    "headline": "Snackautomaten — für Büro, Wartebereich, Schule oder Fitnessstudio: in optimaler Konfiguration.",
+    "subheadline": "Von der Tageszeitung bis zum Schokoriegel. Vieles ist möglich.",
+    "description": "Unsere Vendingautomaten sind die 24/7-Lösung um Ihren Kunden Snacks und erfrischende Kaltgetränke zu jeder Tages- und Nachtzeit zu liefern.",
+    "heroImageUrl": "/images/hero-snack.jpg"
+  },
+  {
+    "slug": "kaltgetraenkeautomaten",
+    "name": "Kaltgetränkeautomaten",
+    "headline": "Kaltgetränkeautomaten — in größtmöglicher Produkt- und Einstellungsflexibilität.",
+    "subheadline": "Sorgen Sie für erfrischende Momente mit kühlen Durstlöschern.",
+    "description": "Mit modernen Glasfronten bieten unsere Kaltgetränkeautomaten eine schnelle Übersicht auf die Getränkesortimente. Über innovative Liftsysteme werden alle Flaschen oder Dosen sicher ausgegeben.",
+    "heroImageUrl": "/images/hero-kalt.jpg"
+  },
+  {
+    "slug": "kaffeeautomaten",
+    "name": "Kaffeeautomaten",
+    "headline": "Kaffeeautomaten — ganz nach Ihren Wünschen.",
+    "subheadline": "Auf Knopfdruck köstlicher Kaffee: problemlos in allen Sorten.",
+    "description": "Immer frischer Kaffee für Ihre Mitarbeiter — ganz einfach, schnell und ohne Aufwand für Sie. Einfach zu bedienende Vollautomaten mit stabiler Profitechnik zu einem wirklich attraktiven Preis.",
+    "heroImageUrl": "/images/hero-kaffee.jpg"
+  },
+  {
+    "slug": "wasserspender",
+    "name": "Wasserspender",
+    "headline": "Wasserspender für Wasser das lange frisch bleibt.",
+    "subheadline": "Genießen Sie täglich gefiltertes Tafelwasser.",
+    "description": "Genießen Sie täglich gefiltertes Tafelwasser aus Ihrer sempreAqua. Sie vereint die Vorteile aus Eisbank- und Trockenkühlung.",
+    "heroImageUrl": "/images/hero-wasser.jpg"
+  }
+]

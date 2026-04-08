@@ -4,4 +4,4 @@ export { StaggerContainer } from "./StaggerContainer";
 export { StaggerItem } from "./StaggerItem";
 export { ParallaxHero } from "./ParallaxHero";
 export { TiltCard } from "./TiltCard";
-export { AnimatedCounter, formatCentsToEUR } from "./AnimatedCounter";
+export { AnimatedCounter } from "./AnimatedCounter";

@@ -6,7 +6,7 @@ import {
   cardTilt,
   priceSpring,
 } from "@/lib/motion-variants";
-import { formatCentsToEUR } from "@/components/motion/AnimatedCounter";
+import { formatCentsToEUR } from "@/lib/formatPrice";
 
 describe("motion-variants", () => {
   it("exports fadeUp with hidden and visible states", () => {

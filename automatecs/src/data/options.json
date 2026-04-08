@@ -1,0 +1,65 @@
+[
+  {
+    "id": "muenzwechsler",
+    "name": "Münzwechsler SandenVendo SC5E MDBE",
+    "description": "5 Tuben Münzwechsler von SandenVendo mit MDB Schnittstelle",
+    "priceCents": 52000,
+    "category": "payment"
+  },
+  {
+    "id": "nayax",
+    "name": "Nayax VPOS Touch",
+    "description": "Kontaktloses Gerät für Kundenkarten, Kredit- & Prepaid-Karten sowie mobilem NFC-basiertem Zahlungsverkehr",
+    "priceCents": 99000,
+    "category": "payment"
+  },
+  {
+    "id": "ict-xba",
+    "name": "ICT XBA Banknotenleser",
+    "description": "Ausgestattet mit innovativer Weitwinkel Banknoten Insertion Technologie — Akzeptanzrate von 98% oder höher",
+    "priceCents": 59500,
+    "category": "payment"
+  },
+  {
+    "id": "ict-dcm5",
+    "name": "ICT DCM5 Dokumentenleser",
+    "description": "Dokumentenleser für die Altersverifikation. Zum Verkauf von Vapes, Alkohol, Zigaretten.",
+    "priceCents": 57500,
+    "category": "security"
+  },
+  {
+    "id": "senvend-ux700",
+    "name": "SENVEND UX700",
+    "description": "Girocard-Akzeptanz und PIN on glass-Fähigkeit. Mit integrierter Altersprüfung mit Gesichtsscan, Girocard, Paypal.",
+    "priceCents": 109900,
+    "category": "payment"
+  },
+  {
+    "id": "sicherheitsschloss",
+    "name": "Sicherheitsschloss",
+    "description": "Zusätzliches Sicherheitsschloss für den Automaten",
+    "priceCents": 10000,
+    "category": "security"
+  },
+  {
+    "id": "schluesselsatz",
+    "name": "Schlüsselsatz",
+    "description": "Zusätzlicher Schlüsselsatz",
+    "priceCents": 13000,
+    "category": "security"
+  },
+  {
+    "id": "bodenbefestigung",
+    "name": "Bodenbefestigung",
+    "description": "Bodenbefestigung für stabilen Stand",
+    "priceCents": 10000,
+    "category": "equipment"
+  },
+  {
+    "id": "zusaetzliche-ebenen",
+    "name": "Zusätzliche Ebenen Warenangebot",
+    "description": "Erweitern Sie die Anzahl der verfügbaren Etagen",
+    "priceCents": 10000,
+    "category": "equipment"
+  }
+]

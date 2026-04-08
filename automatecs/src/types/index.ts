@@ -3,12 +3,14 @@ export interface Product {
   slug: string;
   name: string;
   category: CategorySlug;
-  basePriceCents: number; // e.g. 829000 = 8.290,00 €
+  basePriceCents: number; // e.g. 829000 = 8.290,00 € (configurator start)
+  categoryPriceCents: number; // e.g. 619000 = 6.190,00 € (category card display)
   features: string[];
   specs: Specs | null;
   description: string;
   imageUrl: string;
   hasConfigurator: boolean;
+  isPlaceholder: boolean; // Landa L2: true for Kalt/Kaffee pending real data from Werner
 }
 
 /** Product category */
