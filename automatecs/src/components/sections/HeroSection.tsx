@@ -33,7 +33,7 @@ export function HeroSection({
     return (
       <section className="grid grid-cols-1 lg:grid-cols-2 min-h-[70vh]">
         {/* Left: Text on Charcoal */}
-        <div className="bg-brand-charcoal flex items-center">
+        <div className="bg-brand-black flex items-center">
           <div className="w-full px-4 md:px-12 py-12 md:py-24">
             <motion.h1
               className="font-heading text-3xl md:text-5xl font-bold text-brand-white leading-tight"
@@ -79,7 +79,7 @@ export function HeroSection({
 
         {/* Right: Infographic on Warm White */}
         <motion.div
-          className="bg-brand-warm-white flex items-center justify-center p-4 md:p-8"
+          className="bg-brand-white flex items-center justify-center p-4 md:p-8"
           initial={shouldAnimate ? { opacity: 0 } : false}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" as const, delay: 0.3 }}
@@ -91,7 +91,7 @@ export function HeroSection({
             className="block w-full cursor-pointer"
           >
             <Image
-              src={getImageUrl(heroImage)}
+              src={heroImage}
               alt="Automatecs Service-Kreislauf — Beratung, Konfiguration, Lieferung, Einweisung, Betrieb, Wartung"
               width={1460}
               height={820}
