@@ -7,6 +7,25 @@
 
 ---
 
+### [S021] — 2026-04-09 — КРИТИЧЕСКИЙ БАГ: сайт без CSS + 2 СТРАЙКА
+
+**Роли:** #3 Tobias Kerner (страйк 1/2), #6 Jan Breuer (страйк 1/2)
+**Статус:** завершено — баг исправлен
+
+**Баг:** Сайт на GitHub Pages рендерился БЕЗ CSS — голый HTML, без стилей.
+**Причина:** `basePath` не задан в next.config.ts. GitHub Pages = subdirectory `/automatecs/`. CSS/JS assets запрашивались по `/_next/` (404) вместо `/automatecs/_next/`.
+**Фикс:** `basePath: '/automatecs'` в next.config.ts. Commit `a167043`.
+
+**СТРАЙКИ:**
+- **#3 Tobias Kerner — страйк 1/2:** пропустил шаги 5-6 протокола P2 (Ланда ревью → ТС2 → ОК CEO). Исправил баг без одобрения CEO.
+- **#6 Jan Breuer — страйк 1/2:** не проверил basePath при deploy (Фаза 14). Сайт ушёл в production с 404 на всех assets.
+
+**Урок:** НИКОГДА не пропускать протокол, даже на critical баг. Ланда ревью + ОК CEO — обязательно.
+
+**Артефакты:** commit `a167043`, TEAM.md реестр замечаний обновлён
+
+---
+
 ### [S020] — 2026-04-08 — ФАЗА 14: Deploy — GitHub Pages LIVE
 
 **Роли:** #6 Jan Breuer (lead)
