@@ -1,12 +1,19 @@
+import { HomeClient } from "./HomeClient";
+import { getAllCategories, getMinPriceByCategory } from "@/lib/catalog";
+import homeContent from "../../content/pages/home.json";
+import type { PageContent } from "@/types";
+
+const content = homeContent as PageContent;
+
 export default function Home() {
+  const categories = getAllCategories();
+  const minPrices = getMinPriceByCategory();
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center">
-      <h1 className="font-heading text-4xl font-bold text-brand-black">
-        Automatecs
-      </h1>
-      <p className="mt-4 text-lg text-gray-600 font-body">
-        Ihr Automatendienstleister in Norddeutschland
-      </p>
-    </main>
+    <HomeClient
+      content={content}
+      categories={categories}
+      minPrices={minPrices}
+    />
   );
 }
