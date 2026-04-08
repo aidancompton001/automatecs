@@ -1,0 +1,7 @@
+# Automatecs — robots.txt
+# Allow all crawlers. Full indexing enabled.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://automatecs.de/sitemap.xml

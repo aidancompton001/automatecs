@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Open_Sans } from "next/font/google";
 import "./globals.css";
 import { LayoutShell } from "@/components/layout/LayoutShell";
+import { generateOrgJsonLd } from "@/lib/seo";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -30,6 +31,10 @@ export const metadata: Metadata = {
     locale: "de_DE",
     siteName: "Automatecs",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -37,9 +42,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const orgJsonLd = generateOrgJsonLd();
+
   return (
     <html lang="de" className={`${poppins.variable} ${openSans.variable}`}>
       <body className="min-h-screen bg-brand-white text-brand-black font-body antialiased">
+        {/* Organization JSON-LD — sitewide (Landa L3) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
         <LayoutShell>{children}</LayoutShell>
       </body>
     </html>
