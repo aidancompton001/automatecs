@@ -51,7 +51,7 @@ export function ProductDetail({
         <section className="py-12 bg-brand-white">
           <div className="max-w-4xl mx-auto px-4">
             <ScrollReveal>
-              <h2 className="font-heading text-2xl font-bold text-brand-black mb-6">
+              <h2 className="font-heading text-xl md:text-2xl font-bold text-brand-black mb-6">
                 Technische Daten
               </h2>
             </ScrollReveal>
@@ -65,7 +65,7 @@ export function ProductDetail({
         <section id="konfigurator" className="py-12 md:py-16">
           <div className="max-w-4xl mx-auto px-4">
             <ScrollReveal>
-              <h2 className="font-heading text-2xl font-bold text-brand-black mb-2">
+              <h2 className="font-heading text-xl md:text-2xl font-bold text-brand-black mb-2">
                 Ihre Wunschausstattung
               </h2>
               <p className="text-sm text-brand-black/70 font-body mb-8">
@@ -90,7 +90,7 @@ export function ProductDetail({
               </p>
               <a
                 href="mailto:info@automatecs.de?subject=Anfrage%20{product.name}"
-                className="inline-block px-8 py-4 bg-brand-green text-brand-white font-heading font-semibold uppercase tracking-wide hover:bg-brand-black transition-colors"
+                className="inline-block px-4 md:px-8 py-3 md:py-4 bg-brand-green text-brand-white font-heading font-semibold text-sm md:text-base uppercase tracking-normal md:tracking-wide hover:bg-brand-black transition-colors"
               >
                 Angebot anfordern
               </a>

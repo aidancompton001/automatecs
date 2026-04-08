@@ -21,7 +21,7 @@ export function CTABanner({
           </h2>
           <Link
             href={href}
-            className="inline-block px-8 py-4 bg-brand-yellow text-brand-black font-heading font-semibold text-lg uppercase tracking-wide hover:bg-brand-gold hover:scale-103 hover:shadow-elevation-3 transition-all duration-300"
+            className="inline-block px-4 md:px-8 py-3 md:py-4 bg-brand-yellow text-brand-black font-heading font-semibold text-sm md:text-lg uppercase tracking-normal md:tracking-wide hover:bg-brand-gold hover:scale-103 hover:shadow-elevation-3 transition-all duration-300"
           >
             Kontakt aufnehmen
           </Link>

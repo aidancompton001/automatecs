@@ -68,7 +68,7 @@ export function HeroSection({
           >
             <Link
               href={ctaHref}
-              className="mt-8 inline-block px-8 py-4 bg-brand-yellow text-brand-black font-heading font-semibold text-lg uppercase tracking-wide hover:bg-brand-gold transition-colors"
+              className="mt-6 md:mt-8 inline-block px-4 md:px-8 py-3 md:py-4 bg-brand-yellow text-brand-black font-heading font-semibold text-sm md:text-lg uppercase tracking-normal md:tracking-wide hover:bg-brand-gold transition-colors"
             >
               {ctaText}
             </Link>

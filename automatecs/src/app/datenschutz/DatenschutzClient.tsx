@@ -26,7 +26,7 @@ export function DatenschutzClient({ doc }: Props) {
               <h2 className="font-heading text-xl font-semibold text-brand-black mb-3">
                 {section.heading}
               </h2>
-              <div className="font-body text-brand-black/80 leading-relaxed whitespace-pre-line">
+              <div className="font-body text-brand-black/80 leading-relaxed whitespace-pre-line break-words">
                 {section.content}
               </div>
             </div>

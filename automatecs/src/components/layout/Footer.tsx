@@ -14,7 +14,7 @@ export function Footer() {
         <div className="max-w-7xl mx-auto px-4 py-8 text-center">
           <motion.a
             href="/kontakt/"
-            className="inline-block px-8 py-4 border-2 border-brand-gold text-brand-gold font-heading font-semibold text-lg uppercase tracking-wide hover:bg-brand-gold hover:text-brand-black transition-colors"
+            className="inline-block px-4 md:px-8 py-3 md:py-4 border-2 border-brand-gold text-brand-gold font-heading font-semibold text-sm md:text-lg uppercase tracking-normal md:tracking-wide hover:bg-brand-gold hover:text-brand-black transition-colors"
             initial={shouldAnimate ? { borderColor: "rgba(218, 178, 0, 0.5)" } : false}
             animate={shouldAnimate ? { borderColor: "rgba(218, 178, 0, 1)" } : undefined}
             transition={{ duration: 1.5, ease: "easeInOut" }}

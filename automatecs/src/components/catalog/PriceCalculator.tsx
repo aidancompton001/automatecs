@@ -55,7 +55,7 @@ export function PriceCalculator({
       {/* Options grouped by category */}
       {Object.entries(grouped).map(([category, opts]) => (
         <div key={category} className="mb-8">
-          <h4 className="font-heading text-sm font-semibold text-brand-black/70 uppercase tracking-wide mb-4">
+          <h4 className="font-heading text-sm font-semibold text-brand-black/70 uppercase tracking-normal md:tracking-wide mb-4">
             {CATEGORY_LABELS[category] ?? category}
           </h4>
 
@@ -71,7 +71,7 @@ export function PriceCalculator({
                     initial={shouldAnimate ? { opacity: 0, x: -10 } : false}
                     animate={{ opacity: 1, x: 0 }}
                     transition={checkboxSpring}
-                    className={`flex items-start gap-4 p-4 border rounded-lg cursor-pointer transition-colors ${
+                    className={`flex items-start gap-3 md:gap-4 p-3 md:p-4 border rounded-lg cursor-pointer transition-colors ${
                       isSelected
                         ? "border-brand-green bg-brand-green/5"
                         : "border-brand-black/15 hover:border-brand-black/20"
@@ -144,7 +144,7 @@ export function PriceCalculator({
           <div className="text-right">
             <AnimatedCounter
               valueCents={totalCents}
-              className="font-heading text-3xl font-bold text-brand-black"
+              className="font-heading text-2xl md:text-3xl font-bold text-brand-black"
             />
           </div>
         </div>

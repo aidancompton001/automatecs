@@ -9,7 +9,7 @@ export default function ErrorPage({
 }) {
   return (
     <div className="flex min-h-[60vh] flex-col items-center justify-center px-4">
-      <h1 className="font-heading text-3xl font-bold text-brand-black mb-4">
+      <h1 className="font-heading text-2xl md:text-3xl font-bold text-brand-black mb-4">
         Etwas ist schiefgelaufen
       </h1>
       <p className="font-body text-brand-black/70 mb-6 text-center max-w-md">

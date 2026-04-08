@@ -46,7 +46,7 @@ export default function RootLayout({
 
   return (
     <html lang="de" className={`${jost.variable} ${openSans.variable}`}>
-      <body className="min-h-screen bg-brand-white text-brand-black font-body antialiased">
+      <body className="min-h-screen bg-brand-white text-brand-black font-body antialiased overflow-x-hidden break-words">
         {/* Organization JSON-LD — sitewide (Landa L3) */}
         <script
           type="application/ld+json"

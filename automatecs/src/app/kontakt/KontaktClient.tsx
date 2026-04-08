@@ -150,7 +150,7 @@ export function KontaktClient({ company }: Props) {
 
                   <button
                     type="submit"
-                    className="w-full px-6 py-4 bg-brand-green text-brand-white font-heading font-semibold uppercase tracking-wide hover:bg-brand-black transition-colors cursor-pointer"
+                    className="w-full px-4 md:px-6 py-3 md:py-4 bg-brand-green text-brand-white font-heading font-semibold text-sm md:text-base uppercase tracking-normal md:tracking-wide hover:bg-brand-black transition-colors cursor-pointer"
                   >
                     Nachricht senden
                   </button>

@@ -46,13 +46,13 @@ export function UnternehmenClient({ content, company }: Props) {
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <StaggerItem>
               <div className="bg-brand-white p-6 border border-brand-black/15 rounded-lg">
-                <p className="font-heading text-3xl font-bold text-brand-green">30+</p>
+                <p className="font-heading text-2xl md:text-3xl font-bold text-brand-green">30+</p>
                 <p className="text-sm text-brand-black/70 font-body mt-1">Jahre Erfahrung</p>
               </div>
             </StaggerItem>
             <StaggerItem>
               <div className="bg-brand-white p-6 border border-brand-black/15 rounded-lg">
-                <p className="font-heading text-3xl font-bold text-brand-green">24/7</p>
+                <p className="font-heading text-2xl md:text-3xl font-bold text-brand-green">24/7</p>
                 <p className="text-sm text-brand-black/70 font-body mt-1">Service & Wartung</p>
               </div>
             </StaggerItem>

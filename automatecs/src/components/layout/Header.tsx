@@ -88,7 +88,7 @@ export function Header() {
         {/* Logo — LUMA Brand Identity */}
         <Link href="/" className="flex items-center gap-2" aria-label="Automatecs Home">
           <img src={`${process.env.__NEXT_ROUTER_BASEPATH || ''}/logo.svg`} alt="Automatecs" width={36} height={36} />
-          <span className="font-heading font-light text-lg text-brand-black uppercase tracking-[0.2em]">
+          <span className="font-heading font-light text-lg text-brand-black uppercase tracking-[0.12em] md:tracking-[0.2em]">
             Automatecs
           </span>
         </Link>

@@ -56,7 +56,7 @@ export function ProductCard({ product }: ProductCardProps) {
         </ul>
 
         {/* Price + CTA */}
-        <div className="mt-4 flex items-center justify-between">
+        <div className="mt-4 flex items-center justify-between flex-wrap gap-2">
           {hasPrice ? (
             <span className="font-heading font-semibold text-brand-green">
               ab {formatCentsCompact(product.categoryPriceCents)},- €

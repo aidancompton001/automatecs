@@ -36,7 +36,7 @@ export function ZubehoerClient() {
               </p>
               <Link
                 href="/kontakt/"
-                className="inline-block px-8 py-4 bg-brand-green text-brand-white font-heading font-semibold uppercase tracking-wide hover:bg-brand-black transition-colors"
+                className="inline-block px-4 md:px-8 py-3 md:py-4 bg-brand-green text-brand-white font-heading font-semibold text-sm md:text-base uppercase tracking-normal md:tracking-wide hover:bg-brand-black transition-colors"
               >
                 Kontaktieren Sie uns für Zubehör
               </Link>
