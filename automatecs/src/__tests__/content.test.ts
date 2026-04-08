@@ -137,22 +137,24 @@ describe("content/legal/ — placeholder files", () => {
     expect(fs.existsSync(filePath)).toBe(true);
   });
 
-  it("impressum contains TODO marker", () => {
+  it("impressum contains TMG §5 and company data", () => {
     const content = fs.readFileSync(
       path.join(CONTENT_DIR, "legal", "impressum.md"),
       "utf-8"
     );
-    expect(content).toContain("TODO");
+    expect(content).toContain("§ 5 TMG");
     expect(content).toContain("Automatecs");
+    expect(content).toContain("04172 98 74 700");
   });
 
-  it("datenschutz contains TODO marker", () => {
+  it("datenschutz contains DSGVO sections", () => {
     const content = fs.readFileSync(
       path.join(CONTENT_DIR, "legal", "datenschutz.md"),
       "utf-8"
     );
-    expect(content).toContain("TODO");
     expect(content).toContain("DSGVO");
+    expect(content).toContain("Cookies");
+    expect(content).toContain("Hosting");
   });
 });
 
