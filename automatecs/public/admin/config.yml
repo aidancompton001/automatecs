@@ -4,9 +4,9 @@
 
 backend:
   name: github
-  repo: "TODO/automatecs"  # UPDATE: owner/repo when GitHub repo is created
+  repo: "aidancompton001/automatecs"
   branch: master
-  base_url: https://automatecs.de  # OAuth callback URL (configure after deploy)
+  base_url: https://aidancompton001.github.io/automatecs
 
 # Media files
 media_folder: "public/images"
