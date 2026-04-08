@@ -47,7 +47,7 @@ export function SpecsTable({ specs }: SpecsTableProps) {
             return (
               <Row
                 key={key}
-                className="border-b border-gray-200"
+                className="border-b border-brand-black/15"
                 {...(shouldAnimate
                   ? {
                       variants: rowVariant,
@@ -58,7 +58,7 @@ export function SpecsTable({ specs }: SpecsTableProps) {
                     }
                   : {})}
               >
-                <td className="py-3 pr-4 text-gray-500 w-1/2">{label}</td>
+                <td className="py-3 pr-4 text-brand-black/70 w-1/2">{label}</td>
                 <td className="py-3 font-medium text-brand-black">
                   {String(value)}
                 </td>

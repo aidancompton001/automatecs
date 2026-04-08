@@ -10,7 +10,7 @@ export function Footer() {
   return (
     <footer className="bg-brand-black text-brand-white">
       {/* CTA Banner */}
-      <div className="border-b border-gray-700">
+      <div className="border-b border-brand-white/20">
         <div className="max-w-7xl mx-auto px-4 py-8 text-center">
           <motion.a
             href="/kontakt/"
@@ -29,23 +29,23 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="font-heading font-bold text-lg mb-4">
+            <h3 className="font-heading font-light text-lg mb-4">
               Automatecs Automaten &amp; Service
             </h3>
-            <address className="not-italic text-sm text-gray-300 space-y-1 font-body">
+            <address className="not-italic text-sm text-brand-white/80 space-y-1 font-body">
               <p>Papenkamp 2</p>
               <p>21376 Salzhausen</p>
               <p className="mt-3">
-                <span className="text-gray-400">Tel:</span>{" "}
+                <span className="text-brand-white/70">Tel:</span>{" "}
                 <a href="tel:04172987470" className="hover:text-brand-yellow transition-colors">
                   04172 98 74 700
                 </a>
               </p>
               <p>
-                <span className="text-gray-400">Fax:</span> 04172 98 74 701
+                <span className="text-brand-white/70">Fax:</span> 04172 98 74 701
               </p>
               <p>
-                <span className="text-gray-400">Mail:</span>{" "}
+                <span className="text-brand-white/70">Mail:</span>{" "}
                 <a href="mailto:info@automatecs.de" className="hover:text-brand-yellow transition-colors">
                   info@automatecs.de
                 </a>
@@ -55,8 +55,8 @@ export function Footer() {
 
           {/* Navigation */}
           <div>
-            <h3 className="font-heading font-bold text-lg mb-4">Navigation</h3>
-            <ul className="space-y-2 text-sm text-gray-300 font-body">
+            <h3 className="font-heading font-light text-lg mb-4">Navigation</h3>
+            <ul className="space-y-2 text-sm text-brand-white/80 font-body">
               <li>
                 <Link href="/" className="hover:text-brand-white transition-colors">Home</Link>
               </li>
@@ -77,8 +77,8 @@ export function Footer() {
 
           {/* Legal */}
           <div>
-            <h3 className="font-heading font-bold text-lg mb-4">Rechtliches</h3>
-            <ul className="space-y-2 text-sm text-gray-300 font-body">
+            <h3 className="font-heading font-light text-lg mb-4">Rechtliches</h3>
+            <ul className="space-y-2 text-sm text-brand-white/80 font-body">
               <li>
                 <Link href="/kontakt/" className="hover:text-brand-white transition-colors">Kontakt</Link>
               </li>
@@ -94,8 +94,8 @@ export function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 py-4 text-center text-xs text-gray-500 font-body">
+      <div className="border-t border-brand-white/20">
+        <div className="max-w-7xl mx-auto px-4 py-4 text-center text-xs text-brand-white/50 font-body">
           &copy; {new Date().getFullYear()} Automatecs Automaten &amp; Service. Alle Rechte vorbehalten.
         </div>
       </div>

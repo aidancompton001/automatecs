@@ -37,7 +37,7 @@ export function CategoryPageLayout({
         <div className="max-w-4xl mx-auto px-4">
           {content.body.map((p, i) => (
             <ScrollReveal key={i}>
-              <p className="text-gray-700 font-body leading-relaxed mb-4">
+              <p className="text-brand-black/80 font-body leading-relaxed mb-4">
                 {p}
               </p>
             </ScrollReveal>
@@ -46,7 +46,7 @@ export function CategoryPageLayout({
       </section>
 
       {/* Products Grid */}
-      <section id="produkte" className="py-12 md:py-16 bg-gray-50">
+      <section id="produkte" className="py-12 md:py-16 bg-brand-white">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-brand-black mb-8">

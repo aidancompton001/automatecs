@@ -12,7 +12,7 @@ export default function ErrorPage({
       <h1 className="font-heading text-3xl font-bold text-brand-black mb-4">
         Etwas ist schiefgelaufen
       </h1>
-      <p className="font-body text-gray-600 mb-6 text-center max-w-md">
+      <p className="font-body text-brand-black/70 mb-6 text-center max-w-md">
         Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es erneut.
       </p>
       <button

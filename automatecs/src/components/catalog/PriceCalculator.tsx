@@ -55,7 +55,7 @@ export function PriceCalculator({
       {/* Options grouped by category */}
       {Object.entries(grouped).map(([category, opts]) => (
         <div key={category} className="mb-8">
-          <h4 className="font-heading text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">
+          <h4 className="font-heading text-sm font-semibold text-brand-black/70 uppercase tracking-wide mb-4">
             {CATEGORY_LABELS[category] ?? category}
           </h4>
 
@@ -74,7 +74,7 @@ export function PriceCalculator({
                     className={`flex items-start gap-4 p-4 border rounded-lg cursor-pointer transition-colors ${
                       isSelected
                         ? "border-brand-green bg-brand-green/5"
-                        : "border-gray-200 hover:border-gray-300"
+                        : "border-brand-black/15 hover:border-brand-black/20"
                     }`}
                     onClick={() => toggleOption(opt.id)}
                   >
@@ -83,7 +83,7 @@ export function PriceCalculator({
                       className={`mt-0.5 w-5 h-5 rounded border-2 flex items-center justify-center shrink-0 ${
                         isSelected
                           ? "bg-brand-green border-brand-green"
-                          : "border-gray-300"
+                          : "border-brand-black/20"
                       }`}
                       animate={
                         shouldAnimate
@@ -114,7 +114,7 @@ export function PriceCalculator({
                       <p className="font-body font-medium text-brand-black text-sm">
                         {opt.name}
                       </p>
-                      <p className="text-xs text-gray-500 font-body mt-1 line-clamp-2">
+                      <p className="text-xs text-brand-black/70 font-body mt-1 line-clamp-2">
                         {opt.description}
                       </p>
                     </div>
@@ -132,11 +132,11 @@ export function PriceCalculator({
       ))}
 
       {/* Total */}
-      <div className="sticky bottom-0 bg-brand-white border-t border-gray-200 py-4 mt-8">
+      <div className="sticky bottom-0 bg-brand-white border-t border-brand-black/15 py-4 mt-8">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm text-gray-500 font-body">Gesamtpreis</p>
-            <p className="text-xs text-gray-400 font-body">
+            <p className="text-sm text-brand-black/70 font-body">Gesamtpreis</p>
+            <p className="text-xs text-brand-black/70 font-body">
               Grundpreis {formatCentsToEUR(basePriceCents)} + {selectedIds.length}{" "}
               {selectedIds.length === 1 ? "Option" : "Optionen"}
             </p>

@@ -64,7 +64,7 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-brand-white border-b border-gray-200">
+    <header className="sticky top-0 z-50 bg-brand-white border-b border-brand-black/15">
       {/* TopBar */}
       <div className="hidden md:block bg-brand-black text-brand-white text-sm">
         <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
@@ -85,9 +85,12 @@ export function Header() {
 
       {/* Main Nav */}
       <nav className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="font-heading font-bold text-xl text-brand-black">
-          Automatecs
+        {/* Logo — LUMA Brand Identity */}
+        <Link href="/" className="flex items-center gap-2" aria-label="Automatecs Home">
+          <img src={`${process.env.__NEXT_ROUTER_BASEPATH || ''}/logo.svg`} alt="Automatecs" width={36} height={36} />
+          <span className="font-heading font-light text-lg text-brand-black uppercase tracking-[0.2em]">
+            Automatecs
+          </span>
         </Link>
 
         {/* Desktop Nav */}
@@ -101,7 +104,7 @@ export function Header() {
             >
               <Link
                 href={item.href}
-                className="font-body text-sm text-gray-700 hover:text-brand-black transition-colors py-2"
+                className="font-body text-sm text-brand-black/80 hover:text-brand-black transition-colors py-2"
               >
                 {item.label}
               </Link>
@@ -115,7 +118,7 @@ export function Header() {
                       initial="hidden"
                       animate="visible"
                       exit="exit"
-                      className="absolute top-full left-0 bg-brand-white border border-gray-200 shadow-elevation-2 rounded-md py-2 min-w-[220px] overflow-hidden"
+                      className="absolute top-full left-0 bg-brand-white border border-brand-black/15 shadow-elevation-2 rounded-md py-2 min-w-[220px] overflow-hidden"
                     >
                       {item.children.map((child, i) => (
                         <motion.li
@@ -126,7 +129,7 @@ export function Header() {
                         >
                           <Link
                             href={child.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-brand-black transition-colors"
+                            className="block px-4 py-2 text-sm text-brand-black/80 hover:bg-brand-black/5 hover:text-brand-black transition-colors"
                           >
                             {child.label}
                           </Link>
@@ -161,7 +164,7 @@ export function Header() {
         {mobileOpen && (
           <>
             <motion.div
-              className="fixed inset-0 bg-black/50 z-40 md:hidden"
+              className="fixed inset-0 bg-brand-black/50 z-40 md:hidden"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -189,7 +192,7 @@ export function Header() {
                   <motion.div key={item.href} custom={i} variants={staggerItem} initial="hidden" animate="visible">
                     <Link
                       href={item.href}
-                      className="block py-3 text-lg font-body text-gray-800 hover:text-brand-black border-b border-gray-100"
+                      className="block py-3 text-lg font-body text-brand-black/80 hover:text-brand-black border-b border-brand-black/10"
                       onClick={() => setMobileOpen(false)}
                     >
                       {item.label}
@@ -200,7 +203,7 @@ export function Header() {
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="block py-2 text-sm text-gray-600 hover:text-brand-black"
+                            className="block py-2 text-sm text-brand-black/70 hover:text-brand-black"
                             onClick={() => setMobileOpen(false)}
                           >
                             {child.label}
@@ -213,11 +216,11 @@ export function Header() {
               </nav>
 
               {/* Mobile contact */}
-              <div className="mt-8 pt-4 border-t border-gray-200">
+              <div className="mt-8 pt-4 border-t border-brand-black/15">
                 <a href="tel:04172987470" className="block text-sm text-brand-green font-medium">
                   04172 98 74 700
                 </a>
-                <a href="mailto:info@automatecs.de" className="block text-sm text-gray-600 mt-1">
+                <a href="mailto:info@automatecs.de" className="block text-sm text-brand-black/70 mt-1">
                   info@automatecs.de
                 </a>
               </div>

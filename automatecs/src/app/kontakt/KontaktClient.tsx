@@ -29,7 +29,7 @@ export function KontaktClient({ company }: Props) {
             <h1 className="font-heading text-3xl md:text-5xl font-bold">
               Kontakt
             </h1>
-            <p className="mt-4 font-body text-lg text-gray-200">
+            <p className="mt-4 font-body text-lg text-brand-white/80">
               Wir freuen uns auf Ihre Anfrage.
             </p>
           </ScrollReveal>
@@ -45,13 +45,13 @@ export function KontaktClient({ company }: Props) {
                 <h2 className="font-heading text-2xl font-bold text-brand-black mb-6">
                   {company.name}
                 </h2>
-                <address className="not-italic font-body text-gray-700 space-y-3">
+                <address className="not-italic font-body text-brand-black/80 space-y-3">
                   <p>{company.address}</p>
                   <p>
                     {company.zip} {company.city}
                   </p>
                   <p className="mt-4">
-                    <span className="text-gray-500">Tel:</span>{" "}
+                    <span className="text-brand-black/70">Tel:</span>{" "}
                     <a
                       href={`tel:${company.phone.replace(/\s/g, "")}`}
                       className="text-brand-green hover:text-brand-black transition-colors"
@@ -60,10 +60,10 @@ export function KontaktClient({ company }: Props) {
                     </a>
                   </p>
                   <p>
-                    <span className="text-gray-500">Fax:</span> {company.fax}
+                    <span className="text-brand-black/70">Fax:</span> {company.fax}
                   </p>
                   <p>
-                    <span className="text-gray-500">E-Mail:</span>{" "}
+                    <span className="text-brand-black/70">E-Mail:</span>{" "}
                     <a
                       href={`mailto:${company.email}`}
                       className="text-brand-green hover:text-brand-black transition-colors"
@@ -91,7 +91,7 @@ export function KontaktClient({ company }: Props) {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-body font-medium text-gray-700 mb-1"
+                      className="block text-sm font-body font-medium text-brand-black/80 mb-1"
                     >
                       Name
                     </label>
@@ -101,7 +101,7 @@ export function KontaktClient({ company }: Props) {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded font-body text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition-shadow"
+                      className="w-full px-4 py-3 border border-brand-black/20 rounded font-body text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition-shadow"
                       placeholder="Ihr Name"
                     />
                   </div>
@@ -109,7 +109,7 @@ export function KontaktClient({ company }: Props) {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-body font-medium text-gray-700 mb-1"
+                      className="block text-sm font-body font-medium text-brand-black/80 mb-1"
                     >
                       E-Mail
                     </label>
@@ -119,7 +119,7 @@ export function KontaktClient({ company }: Props) {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded font-body text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition-shadow"
+                      className="w-full px-4 py-3 border border-brand-black/20 rounded font-body text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition-shadow"
                       placeholder="ihre@email.de"
                     />
                   </div>
@@ -127,7 +127,7 @@ export function KontaktClient({ company }: Props) {
                   <div>
                     <label
                       htmlFor="nachricht"
-                      className="block text-sm font-body font-medium text-gray-700 mb-1"
+                      className="block text-sm font-body font-medium text-brand-black/80 mb-1"
                     >
                       Nachricht
                     </label>
@@ -138,10 +138,10 @@ export function KontaktClient({ company }: Props) {
                       required
                       maxLength={500}
                       rows={5}
-                      className="w-full px-4 py-3 border border-gray-300 rounded font-body text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition-shadow resize-none"
+                      className="w-full px-4 py-3 border border-brand-black/20 rounded font-body text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition-shadow resize-none"
                       placeholder="Ihre Nachricht..."
                     />
-                    <p className="text-xs text-gray-400 font-body mt-1">
+                    <p className="text-xs text-brand-black/70 font-body mt-1">
                       {nachricht.length}/500 Zeichen. Für längere Anfragen
                       senden Sie uns bitte eine E-Mail direkt an{" "}
                       {company.email}.

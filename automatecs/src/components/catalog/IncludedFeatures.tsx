@@ -18,7 +18,7 @@ export function IncludedFeatures({ features }: IncludedFeaturesProps) {
       <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {features.map((feature, i) => (
           <StaggerItem key={i}>
-            <div className="flex items-start gap-2 text-sm font-body text-gray-700">
+            <div className="flex items-start gap-2 text-sm font-body text-brand-black/80">
               <span className="text-brand-green mt-0.5 shrink-0">✓</span>
               <span>{feature}</span>
             </div>

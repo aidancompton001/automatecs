@@ -7,6 +7,104 @@
 
 ---
 
+### [S025] — 2026-04-09 — T006: LUMA Brand Identity — 5 цветов, Jost, лого — 362 теста
+
+**Задача:** [T006](docs/tasks/T006_luma_branding_implementation.md)
+**Роли:** #2 Lena Stark (lead), #3 Tobias Kerner, #14 Hans Landa (ТС ревью)
+**Статус:** завершено
+
+**Что сделано:**
+
+- Строгая 5-цветная палитра LUMA: Gold #ffd936, Dark Gold #dab200, Forest Green #536942, Warm White #f8f7f4, Charcoal #2a2a2a
+- 92 gray-класса удалены из 26 файлов → замена на opacity от Charcoal/Warm White
+- 10 gray-токенов удалены из globals.css
+- brand-black: #1a1a1a → #2a2a2a (Charcoal)
+- brand-white: #ffffff → #f8f7f4 (Warm White)
+- Heading font: Poppins → Jost (Light Extended Sans-Serif, weights 300-600)
+- SVG лого: "A" с золотой полосой, Header uppercase tracking-[0.2em]
+- WCAG contrast check: все комбинации ≥ 4.5:1 (min opacity 70%)
+- ParallaxHero gradient: #1a1a1a → #2a2a2a
+- 3 новых теста: no gray-* anywhere, no old hex, no gray tokens in CSS
+
+**Ключевые решения:**
+
+- Ланда L1: НЕ переименовывать токены → меняем ЗНАЧЕНИЯ, сокращаем правки
+- Ланда L2: Contrast check ПЕРЕД заменами → charcoal/50 FAIL → min 70%
+- Ланда L3: Тесты СНАЧАЛА → обновили до токенов
+
+**Артефакты:** 30 файлов изменены, `public/logo.svg` создан
+
+**Тесты:**
+
+- `npm run build` ✅ (39 pages)
+- `npx vitest run` ✅ (362/362)
+- `npx tsc --noEmit` ✅ (0 errors)
+- `grep gray- src/` = 0 ✅
+
+---
+
+### [S024] — 2026-04-09 — T005: Серая полоска убрана — 359 тестов
+
+**Роли:** #2 Lena Stark
+**Статус:** завершено
+
+**Баг:** Серая горизонтальная полоска между тёмным hero gradient и контентом.
+**Причина:** CategoryGrid `bg-gray-50` + `py-16` = серый padding видим на стыке с hero.
+**Фикс:** `bg-gray-50` → `bg-brand-white`. Commit `f8eaad0`.
+**Тест:** CategoryGrid НЕ содержит bg-gray-50 ✅
+
+---
+
+### [S023] — 2026-04-09 — T004: Изображения из PDF + basePath fix — 357 тестов
+
+**Роли:** #2 Lena Stark (lead), #3 Tobias Kerner, #14 Hans Landa (ТС ревью)
+**Статус:** завершено
+
+**Что сделано:**
+- 133 изображения извлечены из 3 PDF (pymupdf)
+- Аудит: AdobeStock watermark на hero images → SKIP, чистые фото автоматов → USE
+- 21 product images: маппинг по slug (3 Sanden Vendo + 3 sempreAqua)
+- 2 blog images (кофейные зёрна — чистые)
+- assets.ts: getImageUrl() с basePath '/automatecs' (T004 CSS url() fix)
+- ProductCard: aspect-[3/4] — fixed ratio, NO CLS
+- BlogCard: aspect-video — fixed ratio, NO CLS
+- ParallaxHero: gradient fallback (brand colors) когда нет hero image
+- Hero paths: убраны несуществующие → gradient fallback
+- 32 новых теста: file existence, basePath, aspect ratios, no AdobeStock
+
+**Артефакты:** 36 файлов, commit `84ca421`, deployed
+
+**Тесты:**
+- `npm run build` ✅ (39 pages, 21+2 images in out/)
+- `npx vitest run` ✅ (357/357)
+- Deploy ✅ SUCCESS
+
+---
+
+### [S022] — 2026-04-09 — LUMA Brand Identity промт для Automatecs
+
+**Задача:** [T003](docs/tasks/T003_luma_branding_prompts.md)
+**Роли:** #2 Lena Stark (UX/UI), #14 Hans Landa (ТС ревью)
+**Статус:** завершено
+
+**Что сделано:**
+- LUMA Brand Identity промт адаптирован из примера (Luma Home → Automatecs)
+- 5 блоков: Brand Name, Brand Values, Target Audience, Industry, Visual Direction
+- Бренд-параметры: #ffd936/#dab200/#536942, Norddeutsche Zuverlässigkeit, 30+ лет
+- Диагностика T004: обнаружено 0 файлов изображений на сайте (31 ссылка → 404)
+
+**Ключевые решения:**
+- Ланда L1: добавлен Visual Direction (цвета, стиль, освещение) — без него LUMA не знает как рендерить
+- Ланда L2: "German engineering" → "Norddeutsche Zuverlässigkeit" (Automatecs = сервис, не производитель)
+
+**Артефакты:** `docs/tasks/T003_luma_branding_prompts.md`, `docs/tasks/T004_missing_images_fix.md`
+
+**Следующие шаги:**
+- CEO генерирует визуалы на LUMA
+- T004: добавить placeholder-изображения + исправить basePath в CSS url()
+
+---
+
 ### [S021] — 2026-04-09 — КРИТИЧЕСКИЙ БАГ: сайт без CSS + 2 СТРАЙКА
 
 **Роли:** #3 Tobias Kerner (страйк 1/2), #6 Jan Breuer (страйк 1/2)

@@ -34,7 +34,7 @@ export function CategoryGrid({ categories, minPrices }: CategoryGridProps) {
               <StaggerItem key={cat.slug}>
                 <Link
                   href={`/automaten/${cat.slug}/`}
-                  className="group block bg-brand-white border border-gray-200 rounded-lg p-6 hover:shadow-elevation-3 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                  className="group block bg-brand-white border border-brand-black/15 rounded-lg p-6 hover:shadow-elevation-3 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                 >
                   {/* Icon placeholder — will be replaced by real images */}
                   <div className="text-4xl mb-4">
@@ -45,7 +45,7 @@ export function CategoryGrid({ categories, minPrices }: CategoryGridProps) {
                     {cat.name}
                   </h3>
 
-                  <p className="mt-2 text-sm text-gray-600 font-body line-clamp-2">
+                  <p className="mt-2 text-sm text-brand-black/70 font-body line-clamp-2">
                     {cat.subheadline}
                   </p>
 

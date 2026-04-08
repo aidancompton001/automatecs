@@ -9,7 +9,7 @@ export default function NotFound() {
       <h2 className="font-heading text-2xl font-semibold text-brand-black mb-4">
         Seite nicht gefunden
       </h2>
-      <p className="font-body text-gray-600 mb-8 text-center max-w-md">
+      <p className="font-body text-brand-black/70 mb-8 text-center max-w-md">
         Die von Ihnen gesuchte Seite existiert leider nicht oder wurde
         verschoben.
       </p>

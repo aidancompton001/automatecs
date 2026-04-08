@@ -39,7 +39,7 @@ export function ProductDetail({
       <section className="py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4">
           <ScrollReveal>
-            <p className="text-gray-700 font-body leading-relaxed text-lg">
+            <p className="text-brand-black/80 font-body leading-relaxed text-lg">
               {product.description}
             </p>
           </ScrollReveal>
@@ -48,7 +48,7 @@ export function ProductDetail({
 
       {/* Specs Table — only if specs exist */}
       {product.specs && (
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-brand-white">
           <div className="max-w-4xl mx-auto px-4">
             <ScrollReveal>
               <h2 className="font-heading text-2xl font-bold text-brand-black mb-6">
@@ -68,7 +68,7 @@ export function ProductDetail({
               <h2 className="font-heading text-2xl font-bold text-brand-black mb-2">
                 Ihre Wunschausstattung
               </h2>
-              <p className="text-sm text-gray-500 font-body mb-8">
+              <p className="text-sm text-brand-black/70 font-body mb-8">
                 Wählen Sie Ihre Zusatzoptionen — der Gesamtpreis wird automatisch berechnet.
               </p>
             </ScrollReveal>

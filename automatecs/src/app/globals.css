@@ -3,24 +3,12 @@
 /* ===== AUTOMATECS DESIGN TOKENS ===== */
 
 @theme inline {
-  /* Brand Colors */
-  --color-brand-yellow: #ffd936;
-  --color-brand-gold: #dab200;
-  --color-brand-green: #536942;
-  --color-brand-black: #1a1a1a;
-  --color-brand-white: #ffffff;
-
-  /* Grays */
-  --color-gray-50: #f9fafb;
-  --color-gray-100: #f3f4f6;
-  --color-gray-200: #e5e7eb;
-  --color-gray-300: #d1d5db;
-  --color-gray-400: #9ca3af;
-  --color-gray-500: #6b7280;
-  --color-gray-600: #4b5563;
-  --color-gray-700: #374151;
-  --color-gray-800: #1f2937;
-  --color-gray-900: #111827;
+  /* LUMA Brand Identity — ONLY 5 COLORS */
+  --color-brand-yellow: #ffd936;    /* Gold */
+  --color-brand-gold: #dab200;      /* Dark Gold */
+  --color-brand-green: #536942;     /* Forest Green */
+  --color-brand-black: #2a2a2a;     /* Charcoal */
+  --color-brand-white: #f8f7f4;     /* Warm White */
 
   /* Elevation Shadows */
   --shadow-elevation-1: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -28,8 +16,8 @@
   --shadow-elevation-3: 0 10px 20px rgba(0, 0, 0, 0.1);
   --shadow-elevation-4: 0 20px 40px rgba(0, 0, 0, 0.15);
 
-  /* Fonts */
-  --font-heading: var(--font-poppins);
+  /* Fonts — LUMA: Jost (Light Extended Sans-Serif) */
+  --font-heading: var(--font-jost);
   --font-body: var(--font-open-sans);
 
   /* Breakpoints */

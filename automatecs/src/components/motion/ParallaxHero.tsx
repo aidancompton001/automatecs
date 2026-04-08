@@ -8,7 +8,7 @@ import type { ReactNode } from "react";
 
 /** Brand gradient fallback when no image provided */
 const FALLBACK_GRADIENT =
-  "linear-gradient(135deg, #536942 0%, #1a1a1a 50%, #dab200 100%)";
+  "linear-gradient(135deg, #536942 0%, #2a2a2a 50%, #dab200 100%)";
 
 interface ParallaxHeroProps {
   backgroundImage?: string;

@@ -20,7 +20,7 @@ export function CompanyIntro({ title, paragraphs }: CompanyIntroProps) {
         <div className="space-y-4">
           {paragraphs.map((p, i) => (
             <ScrollReveal key={i}>
-              <p className="text-gray-700 font-body leading-relaxed">{p}</p>
+              <p className="text-brand-black/80 font-body leading-relaxed">{p}</p>
             </ScrollReveal>
           ))}
         </div>

@@ -205,9 +205,9 @@ describe("T001 Checklist: T002 fixes", () => {
     expect(types).toContain("interface PageContent");
   });
 
-  it("Fonts: Poppins + Open Sans in layout", () => {
+  it("Fonts: Jost + Open Sans in layout (LUMA Brand Identity)", () => {
     const layout = fs.readFileSync(path.join(SRC, "app/layout.tsx"), "utf-8");
-    expect(layout).toContain("Poppins");
+    expect(layout).toContain("Jost");
     expect(layout).toContain("Open_Sans");
   });
 

@@ -25,7 +25,7 @@ export function ServiceClient({ content }: Props) {
         <div className="max-w-4xl mx-auto px-4">
           {content.body.map((p, i) => (
             <ScrollReveal key={i}>
-              <p className="text-gray-700 font-body leading-relaxed mb-4 text-lg">
+              <p className="text-brand-black/80 font-body leading-relaxed mb-4 text-lg">
                 {p}
               </p>
             </ScrollReveal>
@@ -35,7 +35,7 @@ export function ServiceClient({ content }: Props) {
 
       {/* Two-Column Sections: Vollservice + Vorteile */}
       {content.sections && content.sections.length >= 2 && (
-        <section className="py-12 md:py-16 bg-gray-50">
+        <section className="py-12 md:py-16 bg-brand-white">
           <div className="max-w-6xl mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
               {content.sections.map((section, sIdx) => (
@@ -49,7 +49,7 @@ export function ServiceClient({ content }: Props) {
                         <StaggerItem key={iIdx}>
                           <div className="flex items-start gap-3">
                             <span className="text-brand-green mt-1 shrink-0">✓</span>
-                            <p className="text-gray-700 font-body">{item}</p>
+                            <p className="text-brand-black/80 font-body">{item}</p>
                           </div>
                         </StaggerItem>
                       ))}

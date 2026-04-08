@@ -26,7 +26,7 @@ export function UnternehmenClient({ content, company }: Props) {
         <div className="max-w-4xl mx-auto px-4">
           {content.body.map((p, i) => (
             <ScrollReveal key={i}>
-              <p className="text-gray-700 font-body leading-relaxed mb-4 text-lg">
+              <p className="text-brand-black/80 font-body leading-relaxed mb-4 text-lg">
                 {p}
               </p>
             </ScrollReveal>
@@ -35,7 +35,7 @@ export function UnternehmenClient({ content, company }: Props) {
       </section>
 
       {/* Company Facts */}
-      <section className="py-12 md:py-16 bg-gray-50">
+      <section className="py-12 md:py-16 bg-brand-white">
         <div className="max-w-4xl mx-auto px-4">
           <ScrollReveal>
             <h2 className="font-heading text-2xl font-bold text-brand-black mb-8">
@@ -45,27 +45,27 @@ export function UnternehmenClient({ content, company }: Props) {
 
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <StaggerItem>
-              <div className="bg-brand-white p-6 border border-gray-200 rounded-lg">
+              <div className="bg-brand-white p-6 border border-brand-black/15 rounded-lg">
                 <p className="font-heading text-3xl font-bold text-brand-green">30+</p>
-                <p className="text-sm text-gray-600 font-body mt-1">Jahre Erfahrung</p>
+                <p className="text-sm text-brand-black/70 font-body mt-1">Jahre Erfahrung</p>
               </div>
             </StaggerItem>
             <StaggerItem>
-              <div className="bg-brand-white p-6 border border-gray-200 rounded-lg">
+              <div className="bg-brand-white p-6 border border-brand-black/15 rounded-lg">
                 <p className="font-heading text-3xl font-bold text-brand-green">24/7</p>
-                <p className="text-sm text-gray-600 font-body mt-1">Service & Wartung</p>
+                <p className="text-sm text-brand-black/70 font-body mt-1">Service & Wartung</p>
               </div>
             </StaggerItem>
             <StaggerItem>
-              <div className="bg-brand-white p-6 border border-gray-200 rounded-lg">
+              <div className="bg-brand-white p-6 border border-brand-black/15 rounded-lg">
                 <p className="font-heading text-lg font-bold text-brand-black">{company.type}</p>
-                <p className="text-sm text-gray-600 font-body mt-1">Unternehmensform</p>
+                <p className="text-sm text-brand-black/70 font-body mt-1">Unternehmensform</p>
               </div>
             </StaggerItem>
             <StaggerItem>
-              <div className="bg-brand-white p-6 border border-gray-200 rounded-lg">
+              <div className="bg-brand-white p-6 border border-brand-black/15 rounded-lg">
                 <p className="font-heading text-lg font-bold text-brand-black">{company.region}</p>
-                <p className="text-sm text-gray-600 font-body mt-1">Einsatzgebiet</p>
+                <p className="text-sm text-brand-black/70 font-body mt-1">Einsatzgebiet</p>
               </div>
             </StaggerItem>
           </StaggerContainer>

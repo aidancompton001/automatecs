@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Poppins, Open_Sans } from "next/font/google";
+import { Jost, Open_Sans } from "next/font/google";
 import "./globals.css";
 import { LayoutShell } from "@/components/layout/LayoutShell";
 import { generateOrgJsonLd } from "@/lib/seo";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const jost = Jost({
+  variable: "--font-jost",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600"],
   display: "swap",
 });
 
@@ -45,7 +45,7 @@ export default function RootLayout({
   const orgJsonLd = generateOrgJsonLd();
 
   return (
-    <html lang="de" className={`${poppins.variable} ${openSans.variable}`}>
+    <html lang="de" className={`${jost.variable} ${openSans.variable}`}>
       <body className="min-h-screen bg-brand-white text-brand-black font-body antialiased">
         {/* Organization JSON-LD — sitewide (Landa L3) */}
         <script

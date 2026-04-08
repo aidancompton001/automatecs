@@ -18,11 +18,11 @@ export function BlogCard({ post }: BlogCardProps) {
   return (
     <Link
       href={`/blog/${post.slug}/`}
-      className="group block bg-brand-white border border-gray-200 rounded-lg overflow-hidden cursor-pointer
+      className="group block bg-brand-white border border-brand-black/15 rounded-lg overflow-hidden cursor-pointer
         hover:-translate-y-2 hover:shadow-elevation-3 transition-all duration-250"
     >
       {/* Image — fixed aspect ratio, no CLS (T004) */}
-      <div className="relative aspect-video bg-gray-100 overflow-hidden">
+      <div className="relative aspect-video bg-brand-black/5 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center group-hover:scale-103 transition-transform duration-400"
           style={{ backgroundImage: `url(${getImageUrl(post.imageUrl)})` }}
@@ -31,7 +31,7 @@ export function BlogCard({ post }: BlogCardProps) {
 
       {/* Content */}
       <div className="p-5">
-        <time className="text-xs text-gray-400 font-body">
+        <time className="text-xs text-brand-black/70 font-body">
           {formatDateDE(post.date)}
         </time>
 
@@ -39,7 +39,7 @@ export function BlogCard({ post }: BlogCardProps) {
           {post.title}
         </h3>
 
-        <p className="mt-2 text-sm text-gray-600 font-body line-clamp-3">
+        <p className="mt-2 text-sm text-brand-black/70 font-body line-clamp-3">
           {post.excerpt}
         </p>
 

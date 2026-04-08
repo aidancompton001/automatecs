@@ -15,7 +15,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
   return (
     <TiltCard
-      className={`relative bg-brand-white border border-gray-200 rounded-lg overflow-hidden group cursor-pointer transition-shadow duration-300 hover:shadow-elevation-3 ${
+      className={`relative bg-brand-white border border-brand-black/15 rounded-lg overflow-hidden group cursor-pointer transition-shadow duration-300 hover:shadow-elevation-3 ${
         product.isPlaceholder ? "opacity-70" : ""
       }`}
     >
@@ -27,7 +27,7 @@ export function ProductCard({ product }: ProductCardProps) {
       )}
 
       {/* Image — fixed aspect ratio container, no CLS (T004 CEO: no layout shift) */}
-      <div className="relative aspect-[3/4] bg-gray-100 overflow-hidden">
+      <div className="relative aspect-[3/4] bg-brand-black/5 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-400"
           style={{
@@ -47,7 +47,7 @@ export function ProductCard({ product }: ProductCardProps) {
           {product.features.slice(0, 3).map((f, i) => (
             <li
               key={i}
-              className="text-xs text-gray-600 font-body flex items-start gap-1"
+              className="text-xs text-brand-black/70 font-body flex items-start gap-1"
             >
               <span className="text-brand-green mt-0.5">&#x2022;</span>
               {f}

@@ -20,17 +20,19 @@ describe("Project Setup", () => {
     expect(product.category).toBe("snackautomaten");
   });
 
-  it("brand colors are defined", () => {
-    // Verify our design tokens exist as constants
+  it("brand colors are defined (LUMA 5-color palette)", () => {
+    // LUMA Brand Identity: ONLY these 5 colors allowed
     const BRAND = {
-      yellow: "#ffd936",
-      gold: "#dab200",
+      gold: "#ffd936",
+      darkGold: "#dab200",
       green: "#536942",
-      black: "#1a1a1a",
-      white: "#ffffff",
+      charcoal: "#2a2a2a",
+      warmWhite: "#f8f7f4",
     };
-    expect(BRAND.yellow).toBe("#ffd936");
-    expect(BRAND.gold).toBe("#dab200");
+    expect(BRAND.gold).toBe("#ffd936");
+    expect(BRAND.darkGold).toBe("#dab200");
     expect(BRAND.green).toBe("#536942");
+    expect(BRAND.charcoal).toBe("#2a2a2a");
+    expect(BRAND.warmWhite).toBe("#f8f7f4");
   });
 });

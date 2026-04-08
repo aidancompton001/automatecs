@@ -16,7 +16,7 @@ export function BlogDetailClient({ post }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-brand-white">
         <div className="max-w-4xl mx-auto px-4">
           <ScrollReveal>
             <Link
@@ -28,7 +28,7 @@ export function BlogDetailClient({ post }: Props) {
             <h1 className="mt-4 font-heading text-3xl md:text-4xl font-bold text-brand-black leading-tight">
               {post.title}
             </h1>
-            <time className="mt-4 block text-sm text-gray-500 font-body">
+            <time className="mt-4 block text-sm text-brand-black/70 font-body">
               {formatDateDE(post.date)}
             </time>
           </ScrollReveal>
@@ -40,7 +40,7 @@ export function BlogDetailClient({ post }: Props) {
         <div className="max-w-3xl mx-auto px-4">
           {paragraphs.map((p, i) => (
             <ScrollReveal key={i}>
-              <p className="text-gray-700 font-body leading-relaxed text-lg mb-6">
+              <p className="text-brand-black/80 font-body leading-relaxed text-lg mb-6">
                 {p}
               </p>
             </ScrollReveal>

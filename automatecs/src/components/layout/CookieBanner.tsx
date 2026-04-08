@@ -29,10 +29,10 @@ export function CookieBanner() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className="fixed bottom-0 left-0 right-0 z-50 bg-brand-white border-t border-gray-200 shadow-elevation-3"
+          className="fixed bottom-0 left-0 right-0 z-50 bg-brand-white border-t border-brand-black/15 shadow-elevation-3"
         >
           <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-gray-600 font-body">
+            <p className="text-sm text-brand-black/70 font-body">
               Diese Website verwendet nur technisch notwendige Cookies.{" "}
               <Link
                 href="/datenschutz/"

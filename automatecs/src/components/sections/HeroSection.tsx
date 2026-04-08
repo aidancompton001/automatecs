@@ -44,7 +44,7 @@ export function HeroSection({
 
           {/* Subheadline */}
           <motion.p
-            className="mt-4 md:mt-6 text-lg md:text-xl text-gray-200 font-body"
+            className="mt-4 md:mt-6 text-lg md:text-xl text-brand-white/80 font-body"
             initial={shouldAnimate ? { opacity: 0, y: 20 } : false}
             animate={{ opacity: 1, y: 0 }}
             transition={{

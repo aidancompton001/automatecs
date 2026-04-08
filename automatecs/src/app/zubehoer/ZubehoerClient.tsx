@@ -8,13 +8,13 @@ export function ZubehoerClient() {
   return (
     <>
       {/* Hero */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-brand-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <ScrollReveal>
             <h1 className="font-heading text-3xl md:text-5xl font-bold text-brand-black">
               Zubehör
             </h1>
-            <p className="mt-6 font-body text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="mt-6 font-body text-lg text-brand-black/70 max-w-2xl mx-auto">
               Unser Zubehör-Sortiment wird derzeit aktualisiert. Kontaktieren
               Sie uns für individuelle Informationen zu Zubehörteilen für Ihre
               Automaten.
@@ -31,7 +31,7 @@ export function ZubehoerClient() {
               <p className="font-heading text-xl font-semibold text-brand-black mb-2">
                 Demnächst verfügbar
               </p>
-              <p className="font-body text-gray-600 mb-6">
+              <p className="font-body text-brand-black/70 mb-6">
                 Ähnliche Kachelansicht für Zubehörteile folgt in Kürze.
               </p>
               <Link

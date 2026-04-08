@@ -13,13 +13,13 @@ export function BlogListingClient({ posts }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-brand-white">
         <div className="max-w-4xl mx-auto px-4">
           <ScrollReveal>
             <h1 className="font-heading text-3xl md:text-5xl font-bold text-brand-black">
               Blog
             </h1>
-            <p className="mt-4 font-body text-lg text-gray-600">
+            <p className="mt-4 font-body text-lg text-brand-black/70">
               Aktuelles und Wissenswertes rund um Verkaufsautomaten.
             </p>
           </ScrollReveal>
