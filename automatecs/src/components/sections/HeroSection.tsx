@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { ParallaxHero } from "@/components/motion";
 import { useMotion } from "@/components/motion";
@@ -90,13 +89,13 @@ export function HeroSection({
             rel="noopener noreferrer"
             className="block w-full cursor-pointer"
           >
-            <Image
-              src={heroImage}
+            <img
+              src={getImageUrl(heroImage)}
               alt="Automatecs Service-Kreislauf — Beratung, Konfiguration, Lieferung, Einweisung, Betrieb, Wartung"
               width={1460}
               height={820}
               className="w-full h-auto object-contain"
-              priority
+              loading="eager"
             />
           </a>
         </motion.div>

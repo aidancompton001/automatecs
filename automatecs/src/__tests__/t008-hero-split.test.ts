@@ -41,20 +41,25 @@ describe("T008 — Split Hero", () => {
     }
   });
 
-  it("should NOT use getImageUrl for next/image src (double basePath)", () => {
-    // Find <Image ... src={...} /> patterns
-    // getImageUrl should only appear in <a href>, not in <Image src>
-    const imageTagMatch = heroCode.match(
-      /<Image[\s\S]*?src=\{([^}]+)\}[\s\S]*?\/>/
-    );
-    if (imageTagMatch) {
-      const srcValue = imageTagMatch[1];
-      expect(srcValue).not.toContain("getImageUrl");
-    }
+  it("should NOT use next/image Image component (basePath bug with unoptimized)", () => {
+    // next/image with unoptimized:true does NOT prepend basePath on static export
+    expect(heroCode).not.toMatch(/<Image[\s\S]*?src=\{heroImage\}/);
+  });
+
+  it("should use plain <img> with getImageUrl for hero image", () => {
+    expect(heroCode).toMatch(/<img[\s\S]*?src=\{getImageUrl\(heroImage\)\}/);
   });
 
   it("should use getImageUrl for <a href> (raw HTML needs basePath)", () => {
     const aHrefMatch = heroCode.match(/href=\{getImageUrl\(heroImage\)\}/);
     expect(aHrefMatch).not.toBeNull();
+  });
+
+  it("built HTML should contain basePath in infographic src", () => {
+    const outIndex = path.resolve(__dirname, "../../out/index.html");
+    if (fs.existsSync(outIndex)) {
+      const html = fs.readFileSync(outIndex, "utf-8");
+      expect(html).toContain('src="/automatecs/images/infographic-service-kreislauf.jpg"');
+    }
   });
 });
