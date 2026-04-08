@@ -30,12 +30,12 @@ export function HeroSection({
   /* ── Split Hero: text left + image right (T008) ── */
   if (heroImage) {
     return (
-      <section className="grid grid-cols-1 lg:grid-cols-2 min-h-[70vh]">
+      <section className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] min-h-[70vh]">
         {/* Left: Text on Charcoal */}
         <div className="bg-brand-black flex items-center">
           <div className="w-full px-4 md:px-12 py-12 md:py-24">
             <motion.h1
-              className="font-heading text-3xl md:text-5xl font-bold text-brand-white leading-tight"
+              className="font-heading text-2xl md:text-4xl font-bold text-brand-white leading-tight"
               initial={shouldAnimate ? { opacity: 0, y: 20 } : false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" as const }}
@@ -44,7 +44,7 @@ export function HeroSection({
             </motion.h1>
 
             <motion.p
-              className="mt-4 md:mt-6 text-lg md:text-xl text-brand-white/80 font-body"
+              className="mt-4 md:mt-6 text-base md:text-lg text-brand-white/80 font-body"
               initial={shouldAnimate ? { opacity: 0, y: 20 } : false}
               animate={{ opacity: 1, y: 0 }}
               transition={{

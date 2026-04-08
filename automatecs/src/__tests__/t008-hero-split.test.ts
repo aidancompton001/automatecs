@@ -27,6 +27,11 @@ describe("T008 — Split Hero", () => {
     expect(heroCode).not.toContain("bg-brand-charcoal");
   });
 
+  it("should use 1fr_2fr grid proportions (image = 2/3 screen)", () => {
+    expect(heroCode).toContain("lg:grid-cols-[1fr_2fr]");
+    expect(heroCode).not.toContain("lg:grid-cols-2");
+  });
+
   it("should NOT use bg-brand-warm-white (token doesn't exist)", () => {
     expect(heroCode).not.toContain("bg-brand-warm-white");
   });
