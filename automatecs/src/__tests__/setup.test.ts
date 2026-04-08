@@ -8,11 +8,13 @@ describe("Project Setup", () => {
       name: "Test Machine",
       category: "snackautomaten",
       basePriceCents: 829000,
+      categoryPriceCents: 619000,
       features: ["Feature 1"],
       specs: null,
       description: "Test",
       imageUrl: "/test.jpg",
       hasConfigurator: true,
+      isPlaceholder: false,
     };
     expect(product.basePriceCents).toBe(829000);
     expect(product.category).toBe("snackautomaten");
