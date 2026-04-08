@@ -20,7 +20,7 @@ const CATEGORY_ICONS: Record<string, string> = {
 
 export function CategoryGrid({ categories, minPrices }: CategoryGridProps) {
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
+    <section className="py-16 md:py-24 bg-brand-white">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="font-heading text-2xl md:text-3xl font-bold text-brand-black text-center mb-12">
           Unser Automaten-Programm
