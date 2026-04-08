@@ -17,7 +17,7 @@ export default function WasserspenderPage() {
     <CategoryPageLayout
       content={content as PageContent}
       products={products}
-      backgroundImage="/images/hero-wasser.jpg"
+      
     />
   );
 }

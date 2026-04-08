@@ -18,7 +18,7 @@ export function HomeClient({ content, categories, minPrices }: HomeClientProps) 
         ctaText={content.hero.ctaText}
         ctaHref={content.hero.ctaHref}
         sideCallout={content.hero.sideCallout}
-        backgroundImage="/images/hero-home.jpg"
+        
       />
 
       <CategoryGrid categories={categories} minPrices={minPrices} />

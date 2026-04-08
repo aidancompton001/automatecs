@@ -17,7 +17,7 @@ export default function SnackautomatenPage() {
     <CategoryPageLayout
       content={content as PageContent}
       products={products}
-      backgroundImage="/images/hero-snack.jpg"
+      
     />
   );
 }

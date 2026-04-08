@@ -17,7 +17,7 @@ export function ServiceClient({ content }: Props) {
         ctaText={content.hero.ctaText}
         ctaHref={content.hero.ctaHref}
         sideCallout={content.hero.sideCallout}
-        backgroundImage="/images/hero-service.jpg"
+        
       />
 
       {/* Body Text */}

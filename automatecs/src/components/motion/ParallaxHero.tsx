@@ -2,8 +2,13 @@
 
 import { useParallax } from "@/hooks/useParallax";
 import { useMotion } from "./MotionProvider";
+import { getImageUrl } from "@/lib/assets";
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
+
+/** Brand gradient fallback when no image provided */
+const FALLBACK_GRADIENT =
+  "linear-gradient(135deg, #536942 0%, #1a1a1a 50%, #dab200 100%)";
 
 interface ParallaxHeroProps {
   backgroundImage?: string;
@@ -12,15 +17,6 @@ interface ParallaxHeroProps {
   className?: string;
 }
 
-/**
- * 3-layer parallax hero section.
- * Layer 1 (bg): speed 0.3x — slow
- * Layer 2 (overlay): speed 0.5x — medium
- * Layer 3 (content): speed 0.8x — fast
- *
- * SSR-safe: initial offset = 0, parallax activates after mount (Landa fix L1).
- * Mobile: parallax disabled, static background.
- */
 export function ParallaxHero({
   backgroundImage,
   overlayColor = "rgba(0, 0, 0, 0.4)",
@@ -33,18 +29,21 @@ export function ParallaxHero({
 
   const useParallaxEffect = shouldAnimate && !isMobile;
 
+  // basePath-aware image URL (T004 fix)
+  const bgStyle = backgroundImage
+    ? `url(${getImageUrl(backgroundImage)})`
+    : FALLBACK_GRADIENT;
+
   return (
     <section
       ref={bgParallax.ref}
       className={`relative overflow-hidden min-h-[60vh] flex items-center ${className}`}
     >
-      {/* Layer 1: Background Image */}
+      {/* Layer 1: Background — fixed size, no CLS */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: backgroundImage
-            ? `url(${backgroundImage})`
-            : undefined,
+          backgroundImage: bgStyle,
           transform: useParallaxEffect
             ? `translateY(${bgParallax.offset}px)`
             : undefined,
@@ -68,7 +67,7 @@ export function ParallaxHero({
         className="relative z-10 w-full"
         initial={shouldAnimate ? { opacity: 0, y: 20, scale: 0.95 } : false}
         animate={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.6, ease: "easeOut" as const }}
       >
         {children}
       </motion.div>

@@ -17,7 +17,7 @@ export default function KaffeeautomatenPage() {
     <CategoryPageLayout
       content={content as PageContent}
       products={products}
-      backgroundImage="/images/hero-kaffee.jpg"
+      
     />
   );
 }

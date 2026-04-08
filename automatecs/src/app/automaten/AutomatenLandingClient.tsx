@@ -16,7 +16,7 @@ export function AutomatenLandingClient({ categories, minPrices }: Props) {
         subheadline="Individuell konfiguriert — mit kundenfreundlicher Technik."
         ctaText="Kategorien ansehen"
         ctaHref="#kategorien"
-        backgroundImage="/images/hero-automaten.jpg"
+        
       />
 
       <section id="kategorien">

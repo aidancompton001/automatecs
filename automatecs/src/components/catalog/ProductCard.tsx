@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { TiltCard } from "@/components/motion";
 import { formatCentsCompact } from "@/lib/formatPrice";
+import { getImageUrl } from "@/lib/assets";
 import type { Product } from "@/types";
 
 interface ProductCardProps {
@@ -25,18 +26,14 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
       )}
 
-      {/* Image */}
-      <div className="relative h-48 bg-gray-100 overflow-hidden">
+      {/* Image — fixed aspect ratio container, no CLS (T004 CEO: no layout shift) */}
+      <div className="relative aspect-[3/4] bg-gray-100 overflow-hidden">
         <div
-          className="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-400"
+          className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-400"
           style={{
-            backgroundImage: `url(${product.imageUrl})`,
+            backgroundImage: `url(${getImageUrl(product.imageUrl)})`,
           }}
         />
-        {/* Fallback if no image */}
-        <div className="absolute inset-0 flex items-center justify-center text-gray-400 text-sm font-body">
-          {product.name}
-        </div>
       </div>
 
       {/* Content */}

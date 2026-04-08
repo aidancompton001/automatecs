@@ -17,7 +17,7 @@ export default function KaltgetraenkeautomatenPage() {
     <CategoryPageLayout
       content={content as PageContent}
       products={products}
-      backgroundImage="/images/hero-kalt.jpg"
+      
     />
   );
 }

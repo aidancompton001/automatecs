@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { formatDateDE } from "@/lib/blog";
+import { getImageUrl } from "@/lib/assets";
 import type { BlogPost } from "@/types";
 
 interface BlogCardProps {
@@ -20,15 +21,12 @@ export function BlogCard({ post }: BlogCardProps) {
       className="group block bg-brand-white border border-gray-200 rounded-lg overflow-hidden cursor-pointer
         hover:-translate-y-2 hover:shadow-elevation-3 transition-all duration-250"
     >
-      {/* Image */}
-      <div className="relative h-48 bg-gray-100 overflow-hidden">
+      {/* Image — fixed aspect ratio, no CLS (T004) */}
+      <div className="relative aspect-video bg-gray-100 overflow-hidden">
         <div
-          className="w-full h-full bg-cover bg-center group-hover:scale-103 transition-transform duration-400"
-          style={{ backgroundImage: `url(${post.imageUrl})` }}
+          className="absolute inset-0 bg-cover bg-center group-hover:scale-103 transition-transform duration-400"
+          style={{ backgroundImage: `url(${getImageUrl(post.imageUrl)})` }}
         />
-        <div className="absolute inset-0 flex items-center justify-center text-gray-400 text-sm font-body">
-          {post.title}
-        </div>
       </div>
 
       {/* Content */}

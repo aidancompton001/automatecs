@@ -18,7 +18,7 @@ export function UnternehmenClient({ content, company }: Props) {
         ctaText={content.hero.ctaText}
         ctaHref={content.hero.ctaHref}
         sideCallout={content.hero.sideCallout}
-        backgroundImage="/images/hero-unternehmen.jpg"
+        
       />
 
       {/* Body Text */}
