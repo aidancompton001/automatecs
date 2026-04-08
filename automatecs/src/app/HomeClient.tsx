@@ -17,7 +17,7 @@ export function HomeClient({ content, categories, minPrices }: HomeClientProps) 
         subheadline={content.hero.subheadline}
         ctaText={content.hero.ctaText}
         ctaHref={content.hero.ctaHref}
-        heroImage="/images/infographic-service-kreislauf.png"
+        heroImage="/images/infographic-service-kreislauf.jpg"
       />
 
       <CategoryGrid categories={categories} minPrices={minPrices} />
