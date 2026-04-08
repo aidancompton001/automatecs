@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Open_Sans } from "next/font/google";
 import "./globals.css";
+import { LayoutShell } from "@/components/layout/LayoutShell";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -39,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="de" className={`${poppins.variable} ${openSans.variable}`}>
       <body className="min-h-screen bg-brand-white text-brand-black font-body antialiased">
-        {children}
+        <LayoutShell>{children}</LayoutShell>
       </body>
     </html>
   );
