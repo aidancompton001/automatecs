@@ -1,0 +1,199 @@
+# Decap CMS Configuration — Automatecs
+# Git-based CMS: edits → GitHub commit → auto-deploy
+# Backend: GitHub (Landa L1: requires repo + branch)
+
+backend:
+  name: github
+  repo: "TODO/automatecs"  # UPDATE: owner/repo when GitHub repo is created
+  branch: master
+  base_url: https://automatecs.de  # OAuth callback URL (configure after deploy)
+
+# Media files
+media_folder: "public/images"
+public_folder: "/images"
+
+# Editorial workflow: draft → review → publish
+publish_mode: editorial_workflow
+
+# Locale
+locale: "de"
+
+# ============================================================
+# Collections
+# CMS manages: pages (hero texts), blog, legal
+# JSON manages: products, categories, options (dev-only)
+# ============================================================
+
+collections:
+  # ── Pages (Hero Texts) ──────────────────────────
+  - name: "pages"
+    label: "Seiten"
+    description: "Hero-Texte und Inhalte der Hauptseiten"
+    files:
+      - name: "home"
+        label: "Startseite"
+        file: "content/pages/home.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Überschrift", name: "headline", widget: "string" }
+              - { label: "Untertitel", name: "subheadline", widget: "string" }
+              - { label: "Button-Text", name: "ctaText", widget: "string" }
+              - { label: "Button-Link", name: "ctaHref", widget: "string" }
+              - { label: "Seitenhinweis", name: "sideCallout", widget: "string", required: false }
+          - label: "Textabschnitte"
+            name: "body"
+            widget: "list"
+            field: { label: "Absatz", name: "paragraph", widget: "text" }
+
+      - name: "snackautomaten"
+        label: "Snackautomaten"
+        file: "content/pages/snackautomaten.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Überschrift", name: "headline", widget: "string" }
+              - { label: "Untertitel", name: "subheadline", widget: "string" }
+              - { label: "Button-Text", name: "ctaText", widget: "string" }
+              - { label: "Button-Link", name: "ctaHref", widget: "string" }
+              - { label: "Seitenhinweis", name: "sideCallout", widget: "string", required: false }
+          - label: "Textabschnitte"
+            name: "body"
+            widget: "list"
+            field: { label: "Absatz", name: "paragraph", widget: "text" }
+
+      - name: "kaltgetraenkeautomaten"
+        label: "Kaltgetränkeautomaten"
+        file: "content/pages/kaltgetraenkeautomaten.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Überschrift", name: "headline", widget: "string" }
+              - { label: "Untertitel", name: "subheadline", widget: "string" }
+              - { label: "Button-Text", name: "ctaText", widget: "string" }
+              - { label: "Button-Link", name: "ctaHref", widget: "string" }
+              - { label: "Seitenhinweis", name: "sideCallout", widget: "string", required: false }
+          - label: "Textabschnitte"
+            name: "body"
+            widget: "list"
+            field: { label: "Absatz", name: "paragraph", widget: "text" }
+
+      - name: "kaffeeautomaten"
+        label: "Kaffeeautomaten"
+        file: "content/pages/kaffeeautomaten.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Überschrift", name: "headline", widget: "string" }
+              - { label: "Untertitel", name: "subheadline", widget: "string" }
+              - { label: "Button-Text", name: "ctaText", widget: "string" }
+              - { label: "Button-Link", name: "ctaHref", widget: "string" }
+              - { label: "Seitenhinweis", name: "sideCallout", widget: "string", required: false }
+          - label: "Textabschnitte"
+            name: "body"
+            widget: "list"
+            field: { label: "Absatz", name: "paragraph", widget: "text" }
+
+      - name: "wasserspender"
+        label: "Wasserspender"
+        file: "content/pages/wasserspender.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Überschrift", name: "headline", widget: "string" }
+              - { label: "Untertitel", name: "subheadline", widget: "string" }
+              - { label: "Button-Text", name: "ctaText", widget: "string" }
+              - { label: "Button-Link", name: "ctaHref", widget: "string" }
+              - { label: "Seitenhinweis", name: "sideCallout", widget: "string", required: false }
+          - label: "Textabschnitte"
+            name: "body"
+            widget: "list"
+            field: { label: "Absatz", name: "paragraph", widget: "text" }
+
+      - name: "service"
+        label: "Service"
+        file: "content/pages/service.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Überschrift", name: "headline", widget: "string" }
+              - { label: "Untertitel", name: "subheadline", widget: "string" }
+              - { label: "Button-Text", name: "ctaText", widget: "string" }
+              - { label: "Button-Link", name: "ctaHref", widget: "string" }
+              - { label: "Seitenhinweis", name: "sideCallout", widget: "string", required: false }
+          - label: "Textabschnitte"
+            name: "body"
+            widget: "list"
+            field: { label: "Absatz", name: "paragraph", widget: "text" }
+
+      - name: "unternehmen"
+        label: "Unternehmen"
+        file: "content/pages/unternehmen.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Überschrift", name: "headline", widget: "string" }
+              - { label: "Untertitel", name: "subheadline", widget: "string" }
+              - { label: "Button-Text", name: "ctaText", widget: "string" }
+              - { label: "Button-Link", name: "ctaHref", widget: "string" }
+              - { label: "Seitenhinweis", name: "sideCallout", widget: "string", required: false }
+          - label: "Textabschnitte"
+            name: "body"
+            widget: "list"
+            field: { label: "Absatz", name: "paragraph", widget: "text" }
+
+  # ── Blog ─────────────────────────────────────────
+  - name: "blog"
+    label: "Blog"
+    description: "Blog-Beiträge"
+    folder: "src/data"
+    create: false
+    files:
+      - name: "blog-posts"
+        label: "Blog-Beiträge"
+        file: "src/data/blog-posts.json"
+        fields:
+          - label: "Beiträge"
+            name: "posts"
+            widget: "list"
+            fields:
+              - { label: "URL-Slug", name: "slug", widget: "string" }
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Datum", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+              - { label: "Kurztext", name: "excerpt", widget: "text" }
+              - { label: "Bild", name: "imageUrl", widget: "image" }
+              - label: "Inhalt (Absätze)"
+                name: "content"
+                widget: "list"
+                field: { label: "Absatz", name: "paragraph", widget: "text" }
+
+  # ── Legal ────────────────────────────────────────
+  - name: "legal"
+    label: "Rechtliches"
+    description: "Impressum und Datenschutzerklärung"
+    files:
+      - name: "impressum"
+        label: "Impressum"
+        file: "content/legal/impressum.md"
+        fields:
+          - { label: "Inhalt", name: "body", widget: "markdown" }
+
+      - name: "datenschutz"
+        label: "Datenschutzerklärung"
+        file: "content/legal/datenschutz.md"
+        fields:
+          - { label: "Inhalt", name: "body", widget: "markdown" }
