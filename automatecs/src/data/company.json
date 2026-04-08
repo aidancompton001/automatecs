@@ -1,0 +1,19 @@
+{
+  "name": "Automatecs Automaten & Service",
+  "address": "Papenkamp 2",
+  "zip": "21376",
+  "city": "Salzhausen",
+  "phone": "04172 98 74 700",
+  "fax": "04172 98 74 701",
+  "email": "info@automatecs.de",
+  "history": "Seit mehr als 30 Jahren",
+  "type": "Familienbetrieb",
+  "region": "Norddeutschland",
+  "slogan": "Vermietung, Verkauf, Vollservice und Beratung: Ihr Automatendienstleister in Norddeutschland!",
+  "services": [
+    "Vermietung",
+    "Verkauf",
+    "Vollservice",
+    "Beratung"
+  ]
+}

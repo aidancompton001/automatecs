@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "headline": "24/7-Service für Vendingautomaten — wir sorgen ständig für Befüllung mit Ware und Wartung der Geräte.",
+    "subheadline": "Wir sind ständig für Sie da.",
+    "ctaText": "Angebot anfordern",
+    "ctaHref": "/kontakt/",
+    "sideCallout": "Mehr Informationen: 04172 98 74 700"
+  },
+  "body": [
+    "Im Automaten-Operating bietet Automatecs einen Full-Service rund um Ihren Verkaufsautomaten: Wir befüllen, reinigen und warten die Automaten täglich."
+  ],
+  "sections": [
+    {
+      "title": "Unser Operating — Vollservice:",
+      "items": [
+        "Aufstellung und Installation der Automaten",
+        "Regelmäßige, maßgeschneiderte Automatenversorgung",
+        "Regelmäßige Reinigung und Wartung",
+        "24h Reparatur-Service"
+      ]
+    },
+    {
+      "title": "Die Vorteile für Sie:",
+      "items": [
+        "Getränke und Snacks stehen rund um die Uhr zur Verfügung",
+        "Die Automaten sind direkt im Arbeitsbereich aufstellbar",
+        "Ständige Betreuung, Bestückung, Reinigung und Wartung der Automaten",
+        "Für Sie entstehen keine Investitions- und Wartungskosten"
+      ]
+    }
+  ]
+}

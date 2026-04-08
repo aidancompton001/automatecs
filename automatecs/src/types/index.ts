@@ -67,6 +67,8 @@ export interface BlogPost {
 export interface CompanyInfo {
   name: string;
   address: string;
+  zip: string;
+  city: string;
   phone: string;
   fax: string;
   email: string;
@@ -74,4 +76,23 @@ export interface CompanyInfo {
   type: string;
   region: string;
   slogan: string;
+  services: string[];
+}
+
+/** CMS-managed page content — unified interface (Landa L1) */
+export interface PageContent {
+  hero: {
+    headline: string;
+    subheadline: string;
+    ctaText: string;
+    ctaHref: string;
+    sideCallout?: string;
+  };
+  body: string[];
+  sections?: PageSection[];
+}
+
+export interface PageSection {
+  title: string;
+  items: string[];
 }
